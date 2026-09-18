@@ -1,4 +1,5 @@
-﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+﻿//So you can use emojis
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 //Create first tamagotchi and lets you pick a name
 Tamagotchi pet = new Tamagotchi();
 Console.WriteLine("What do you wish to name your Tamagotchi?");
@@ -9,8 +10,8 @@ while(true)
     Console.WriteLine($"{pet.name} : {pet.GetMood()}");
     choice = chooseAction(pet);
     action(pet, choice);
-    //if tomagotchi dies
     Console.Clear();
+    //if tomagotchi dies
     if(!pet.GetAlive())
     {
         Console.WriteLine($"{pet.name} has died");
